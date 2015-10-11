@@ -7,7 +7,6 @@ Foulestival contient le projet unity, avec un .gitignore pour uploader seulement
 #TODO :
 
 - Plan du Hellfest sans texture
-- 
 - Interface avec mini-map
 - Interface avec bouton pour ajouter des festivaliers
 - Interface avec compteur de festivaliers
