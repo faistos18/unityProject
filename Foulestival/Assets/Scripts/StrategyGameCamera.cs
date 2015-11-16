@@ -12,8 +12,6 @@ public class StrategyGameCamera : MonoBehaviour {
     public float zoomSpeed;
 
 
-
-    private float lastMouseScrollDelta;
     public struct MouseScrollLimits
     {
         public float RightBorder;
@@ -33,7 +31,6 @@ public class StrategyGameCamera : MonoBehaviour {
         ScrollLimits.LeftBorder = 10;
         ScrollLimits.UpBorder = 10;
         ScrollLimits.DownBorder = 10;
-        lastMouseScrollDelta = Input.mouseScrollDelta.y;
 	}
 	
 	// Update is called once per frame
