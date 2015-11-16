@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: edf9204207cd3ac45b110762e0b3d20f
+timeCreated: 1447666669
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Mesh10_Group_4_8_Crowd_Barrier1_Model
+    100004: Mesh11_Group_4_9_Crowd_Barrier1_Model
+    100006: Mesh12_Component_1_1_Crowd_Barrier1_Model
+    100008: Mesh13_CB_hook1_Crowd_Barrier1_Model
+    100010: Mesh14_Group4_Group3_legs1_Crowd_Barrier1_Model
+    100012: Mesh15_Group6_Group5_Group3_legs1_Crowd_Barrier1_Model
+    100014: Mesh16_Group_4_10_Crowd_Barrier1_Model
+    100016: Mesh17_Group_4_11_Crowd_Barrier1_Model
+    100018: Mesh18_Group_4_12_Crowd_Barrier1_Model
+    100020: Mesh19_Group_4_13_Crowd_Barrier1_Model
+    100022: Mesh1_Group1_Crowd_Barrier1_Model
+    100024: Mesh20_Component_1_2_Crowd_Barrier1_Model
+    100026: Mesh21_Group_4_14_Crowd_Barrier1_Model
+    100028: Mesh22_Group8_Group7_legs2_Crowd_Barrier1_Model
+    100030: Mesh23_Group10_Group9_Group7_legs2_Crowd_Barrier1_Model
+    100032: Mesh24_CB_hook2_Crowd_Barrier1_Model
+    100034: Mesh25_Group_4_15_Crowd_Barrier1_Model
+    100036: Mesh26_Group_4_16_Crowd_Barrier1_Model
+    100038: Mesh27_Group_4_17_Crowd_Barrier1_Model
+    100040: Mesh28_Group_4_18_Crowd_Barrier1_Model
+    100042: Mesh29_Group_4_19_Crowd_Barrier1_Model
+    100044: Mesh2_Group2_Crowd_Barrier1_Model
+    100046: Mesh3_Group_4_1_Crowd_Barrier1_Model
+    100048: Mesh4_Group_4_2_Crowd_Barrier1_Model
+    100050: Mesh5_Group_4_3_Crowd_Barrier1_Model
+    100052: Mesh6_Group_4_4_Crowd_Barrier1_Model
+    100054: Mesh7_Group_4_5_Crowd_Barrier1_Model
+    100056: Mesh8_Group_4_6_Crowd_Barrier1_Model
+    100058: Mesh9_Group_4_7_Crowd_Barrier1_Model
+    400000: //RootNode
+    400002: Mesh10_Group_4_8_Crowd_Barrier1_Model
+    400004: Mesh11_Group_4_9_Crowd_Barrier1_Model
+    400006: Mesh12_Component_1_1_Crowd_Barrier1_Model
+    400008: Mesh13_CB_hook1_Crowd_Barrier1_Model
+    400010: Mesh14_Group4_Group3_legs1_Crowd_Barrier1_Model
+    400012: Mesh15_Group6_Group5_Group3_legs1_Crowd_Barrier1_Model
+    400014: Mesh16_Group_4_10_Crowd_Barrier1_Model
+    400016: Mesh17_Group_4_11_Crowd_Barrier1_Model
+    400018: Mesh18_Group_4_12_Crowd_Barrier1_Model
+    400020: Mesh19_Group_4_13_Crowd_Barrier1_Model
+    400022: Mesh1_Group1_Crowd_Barrier1_Model
+    400024: Mesh20_Component_1_2_Crowd_Barrier1_Model
+    400026: Mesh21_Group_4_14_Crowd_Barrier1_Model
+    400028: Mesh22_Group8_Group7_legs2_Crowd_Barrier1_Model
+    400030: Mesh23_Group10_Group9_Group7_legs2_Crowd_Barrier1_Model
+    400032: Mesh24_CB_hook2_Crowd_Barrier1_Model
+    400034: Mesh25_Group_4_15_Crowd_Barrier1_Model
+    400036: Mesh26_Group_4_16_Crowd_Barrier1_Model
+    400038: Mesh27_Group_4_17_Crowd_Barrier1_Model
+    400040: Mesh28_Group_4_18_Crowd_Barrier1_Model
+    400042: Mesh29_Group_4_19_Crowd_Barrier1_Model
+    400044: Mesh2_Group2_Crowd_Barrier1_Model
+    400046: Mesh3_Group_4_1_Crowd_Barrier1_Model
+    400048: Mesh4_Group_4_2_Crowd_Barrier1_Model
+    400050: Mesh5_Group_4_3_Crowd_Barrier1_Model
+    400052: Mesh6_Group_4_4_Crowd_Barrier1_Model
+    400054: Mesh7_Group_4_5_Crowd_Barrier1_Model
+    400056: Mesh8_Group_4_6_Crowd_Barrier1_Model
+    400058: Mesh9_Group_4_7_Crowd_Barrier1_Model
+    2300000: Mesh10_Group_4_8_Crowd_Barrier1_Model
+    2300002: Mesh11_Group_4_9_Crowd_Barrier1_Model
+    2300004: Mesh12_Component_1_1_Crowd_Barrier1_Model
+    2300006: Mesh13_CB_hook1_Crowd_Barrier1_Model
+    2300008: Mesh14_Group4_Group3_legs1_Crowd_Barrier1_Model
+    2300010: Mesh15_Group6_Group5_Group3_legs1_Crowd_Barrier1_Model
+    2300012: Mesh16_Group_4_10_Crowd_Barrier1_Model
+    2300014: Mesh17_Group_4_11_Crowd_Barrier1_Model
+    2300016: Mesh18_Group_4_12_Crowd_Barrier1_Model
+    2300018: Mesh19_Group_4_13_Crowd_Barrier1_Model
+    2300020: Mesh1_Group1_Crowd_Barrier1_Model
+    2300022: Mesh20_Component_1_2_Crowd_Barrier1_Model
+    2300024: Mesh21_Group_4_14_Crowd_Barrier1_Model
+    2300026: Mesh22_Group8_Group7_legs2_Crowd_Barrier1_Model
+    2300028: Mesh23_Group10_Group9_Group7_legs2_Crowd_Barrier1_Model
+    2300030: Mesh24_CB_hook2_Crowd_Barrier1_Model
+    2300032: Mesh25_Group_4_15_Crowd_Barrier1_Model
+    2300034: Mesh26_Group_4_16_Crowd_Barrier1_Model
+    2300036: Mesh27_Group_4_17_Crowd_Barrier1_Model
+    2300038: Mesh28_Group_4_18_Crowd_Barrier1_Model
+    2300040: Mesh29_Group_4_19_Crowd_Barrier1_Model
+    2300042: Mesh2_Group2_Crowd_Barrier1_Model
+    2300044: Mesh3_Group_4_1_Crowd_Barrier1_Model
+    2300046: Mesh4_Group_4_2_Crowd_Barrier1_Model
+    2300048: Mesh5_Group_4_3_Crowd_Barrier1_Model
+    2300050: Mesh6_Group_4_4_Crowd_Barrier1_Model
+    2300052: Mesh7_Group_4_5_Crowd_Barrier1_Model
+    2300054: Mesh8_Group_4_6_Crowd_Barrier1_Model
+    2300056: Mesh9_Group_4_7_Crowd_Barrier1_Model
+    3300000: Mesh10_Group_4_8_Crowd_Barrier1_Model
+    3300002: Mesh11_Group_4_9_Crowd_Barrier1_Model
+    3300004: Mesh12_Component_1_1_Crowd_Barrier1_Model
+    3300006: Mesh13_CB_hook1_Crowd_Barrier1_Model
+    3300008: Mesh14_Group4_Group3_legs1_Crowd_Barrier1_Model
+    3300010: Mesh15_Group6_Group5_Group3_legs1_Crowd_Barrier1_Model
+    3300012: Mesh16_Group_4_10_Crowd_Barrier1_Model
+    3300014: Mesh17_Group_4_11_Crowd_Barrier1_Model
+    3300016: Mesh18_Group_4_12_Crowd_Barrier1_Model
+    3300018: Mesh19_Group_4_13_Crowd_Barrier1_Model
+    3300020: Mesh1_Group1_Crowd_Barrier1_Model
+    3300022: Mesh20_Component_1_2_Crowd_Barrier1_Model
+    3300024: Mesh21_Group_4_14_Crowd_Barrier1_Model
+    3300026: Mesh22_Group8_Group7_legs2_Crowd_Barrier1_Model
+    3300028: Mesh23_Group10_Group9_Group7_legs2_Crowd_Barrier1_Model
+    3300030: Mesh24_CB_hook2_Crowd_Barrier1_Model
+    3300032: Mesh25_Group_4_15_Crowd_Barrier1_Model
+    3300034: Mesh26_Group_4_16_Crowd_Barrier1_Model
+    3300036: Mesh27_Group_4_17_Crowd_Barrier1_Model
+    3300038: Mesh28_Group_4_18_Crowd_Barrier1_Model
+    3300040: Mesh29_Group_4_19_Crowd_Barrier1_Model
+    3300042: Mesh2_Group2_Crowd_Barrier1_Model
+    3300044: Mesh3_Group_4_1_Crowd_Barrier1_Model
+    3300046: Mesh4_Group_4_2_Crowd_Barrier1_Model
+    3300048: Mesh5_Group_4_3_Crowd_Barrier1_Model
+    3300050: Mesh6_Group_4_4_Crowd_Barrier1_Model
+    3300052: Mesh7_Group_4_5_Crowd_Barrier1_Model
+    3300054: Mesh8_Group_4_6_Crowd_Barrier1_Model
+    3300056: Mesh9_Group_4_7_Crowd_Barrier1_Model
+    4300000: Mesh1_Group1_Crowd_Barrier1_Model
+    4300002: Mesh15_Group6_Group5_Group3_legs1_Crowd_Barrier1_Model
+    4300004: Mesh24_CB_hook2_Crowd_Barrier1_Model
+    4300006: Mesh11_Group_4_9_Crowd_Barrier1_Model
+    4300008: Mesh25_Group_4_15_Crowd_Barrier1_Model
+    4300010: Mesh7_Group_4_5_Crowd_Barrier1_Model
+    4300012: Mesh20_Component_1_2_Crowd_Barrier1_Model
+    4300014: Mesh12_Component_1_1_Crowd_Barrier1_Model
+    4300016: Mesh22_Group8_Group7_legs2_Crowd_Barrier1_Model
+    4300018: Mesh10_Group_4_8_Crowd_Barrier1_Model
+    4300020: Mesh6_Group_4_4_Crowd_Barrier1_Model
+    4300022: Mesh19_Group_4_13_Crowd_Barrier1_Model
+    4300024: Mesh28_Group_4_18_Crowd_Barrier1_Model
+    4300026: Mesh26_Group_4_16_Crowd_Barrier1_Model
+    4300028: Mesh3_Group_4_1_Crowd_Barrier1_Model
+    4300030: Mesh2_Group2_Crowd_Barrier1_Model
+    4300032: Mesh13_CB_hook1_Crowd_Barrier1_Model
+    4300034: Mesh9_Group_4_7_Crowd_Barrier1_Model
+    4300036: Mesh21_Group_4_14_Crowd_Barrier1_Model
+    4300038: Mesh27_Group_4_17_Crowd_Barrier1_Model
+    4300040: Mesh23_Group10_Group9_Group7_legs2_Crowd_Barrier1_Model
+    4300042: Mesh29_Group_4_19_Crowd_Barrier1_Model
+    4300044: Mesh18_Group_4_12_Crowd_Barrier1_Model
+    4300046: Mesh17_Group_4_11_Crowd_Barrier1_Model
+    4300048: Mesh8_Group_4_6_Crowd_Barrier1_Model
+    4300050: Mesh4_Group_4_2_Crowd_Barrier1_Model
+    4300052: Mesh14_Group4_Group3_legs1_Crowd_Barrier1_Model
+    4300054: Mesh16_Group_4_10_Crowd_Barrier1_Model
+    4300056: Mesh5_Group_4_3_Crowd_Barrier1_Model
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
