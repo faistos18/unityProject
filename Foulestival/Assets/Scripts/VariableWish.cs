@@ -11,11 +11,14 @@ namespace Assets.Scripts
         private float wish;
         private float maxWish;
         private float stepSize;
+        private float updatePeriod; // We increase or decrease of "stepSize" every "updatePeriod" seconds.
+        private float lastUpdateTime;
 
-        public VariableWish(float maxWishValue = 10, float wishValue = 5, float stepSizeValue = 1)
-        {   
+        public VariableWish(float maxWishValue = 10, float wishValue = 5, float updatePeriodValue = 0.2f, float stepSizeValue = 0.2f)
+        {
             stepSize = System.Math.Abs(stepSizeValue); //stepSize could be 0 for a wish that doesn't evolve. That's not the goal but...why not ?
 
+            updatePeriod = System.Math.Abs(updatePeriod);
             if (maxWishValue > 0)
                 maxWish = maxWishValue;
             else
@@ -26,6 +29,7 @@ namespace Assets.Scripts
             else
                 wish = maxWish / 2;
 
+            lastUpdateTime = 0;
         }
         public float getWish()
         {
@@ -37,12 +41,16 @@ namespace Assets.Scripts
         }
         public void update()
         {
-            float step = Time.deltaTime * Random.Range(-1f,1f)*stepSize;
+            float ellapsed = Time.fixedTime - lastUpdateTime;
+            if(ellapsed > updatePeriod)
+            {
+                float step = Random.Range(-1f,1f)*stepSize;
 
-            if (wish + step <= 0 || wish + step >= maxWish)
-                wish -= step;
-            else
-                wish += step;
+                if (wish + step <= 0 || wish + step >= maxWish)
+                    wish -= step;
+                else
+                    wish += step;
+            }
         }
     }
 }

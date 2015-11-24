@@ -9,27 +9,31 @@ namespace Assets.Scripts
 {
     public class SpectatorAgentScript : MonoBehaviour
     {
-        static float breakingPointBlatterCoeff = 0.6f; // When does going to the toilet becomes urgent ?
+        public static float breakingPointBlatterCoeff = 0.5f; // When does going to the toilet becomes urgent ?
 
         // Fixed during Spectator's lifetime
-        float age;  // float because this will be given by a Gaussian Function.
-        float weight;
-        bool isMale;
-        float alcoholResistanceCoeff; // Every "Coeff" is between 0 and 1.
-        float maxBladder; // Max capacity of the bladder. In Millilitters ( approximately from 300 to 600 for an adult)
+        public float age;  // float because this will be given by a Gaussian Function.
+        public float weight;
+        public bool isMale;
+        public float alcoholResistanceCoeff; // Every "Coeff" is between 0 and 1.
+        public float maxBladder; // Max capacity of the bladder. In Millilitters ( approximately from 300 to 600 for an adult)
 
         float badAlcoholBehaviorCoeff; // Does alcohol make this agent agressive ?
 
         // Moves during Spectator's lifetime.
 
-        float bladder; // Evolves between 0 and maxBladder, hopefully for the spectator.
-        float bloodAlcoolemyLevel; // Evolves between 0 and ... No limit for now.
-        float agressiveness; // Evolves with bloodAlcoolemyLevel thanks to badAlcholBehaviorCoeff.
+        public float bladder; // Evolves between 0 and maxBladder, hopefully for the spectator.
+        public float bloodAlcoolemyLevel; // Evolves between 0 and ... No limit for now.
+        public float agressiveness; // Evolves with bloodAlcoolemyLevel thanks to badAlcholBehaviorCoeff.
 
         public VariableWish goingToConcert; // How much does this spectator wants to go to a concert ?
         public VariableWish goingForBeer;   // How much does this spectator wants a beer ? ( This is fondamental wish. Real behavior depends on other factors, like proximity to a bar)
 
+        public Perception perception;
 
+        /*
+         * I must add...
+         * */
         //Stores behaviors.
         private List<Behavior> behaviors;
         Behavior activeBehavior;
@@ -42,8 +46,9 @@ namespace Assets.Scripts
 
         public SpectatorAgentScript()
         {
+            perception = new Perception(this);
             behaviors = new List<Behavior>();
-            goingForBeer = new VariableWish();
+            goingForBeer = new VariableWish(10, 3.5f);
             goingToConcert = new VariableWish();
         }
         void Start()
@@ -55,6 +60,7 @@ namespace Assets.Scripts
 
             alcoholResistanceCoeff = generateGaussianLimited(0.6f, 0.2f, 0f, 1f);
             maxBladder = generateGaussianLimited(450f, 150f, 150, 900);
+            bladder = 0;
             badAlcoholBehaviorCoeff = alcoholResistanceCoeff = generateGaussianLimited(0.6f, 0.2f, 0f, 1f);
 
 
@@ -62,8 +68,13 @@ namespace Assets.Scripts
             isMouseOn = false;
             spectatorTooltip = GameObject.FindWithTag("Tooltip").transform;
             //Behaviors
+            //behaviors.Add(new EnjoyConcertBehavior(this));
             behaviors.Add(new GoToConcertBehavior(this));
-            behaviors.Add(new GetBeerBehavior(this));
+            behaviors.Add(new DrinkBeerBehavior(this));
+            behaviors.Add(new GoToToiletBehavior(this));
+            behaviors.Add(new FlushToiletBehavior(this));
+            behaviors.Add(new WanderBehavior(this));
+            behaviors.Add(new GoToBarBehavior(this));
         }
 
         // Update is called once per frame
@@ -78,7 +89,7 @@ namespace Assets.Scripts
                 rectTransform.anchoredPosition = new Vector2(Input.mousePosition.x - Screen.width / 2.0f, Input.mousePosition.y - Screen.height / 2.0f);
             }
 
-            //Behavior
+            //WisqEnvy update
             goingForBeer.update();
             goingToConcert.update();
 
@@ -86,7 +97,9 @@ namespace Assets.Scripts
                 behavior.updateWish();
 
             //Change behavior if needed.
-            Behavior mostWished = behaviors.OrderBy(behavior => behavior.getWish() ).First();
+            var cast = behaviors.OrderBy(behavior => -behavior.getWish()).ToArray<Behavior>();
+            behaviors = cast.ToList<Behavior>();
+            Behavior mostWished = behaviors.First();
 
             if(mostWished == activeBehavior)
                 activeBehavior.updateBehavior();
@@ -102,6 +115,12 @@ namespace Assets.Scripts
                 mostWished.onBehaviorStarted();
                 activeBehavior = mostWished;
             }
+        }
+        public void drinkBeer(float beer)
+        {
+            //We will set a timer that adds this to BloodAlcoholLevel and Bladder. For now, immediate transfert.
+            bladder += beer;
+            bloodAlcoolemyLevel += beer;
         }
 
         /*
@@ -162,6 +181,14 @@ namespace Assets.Scripts
             spectatorTooltip.GetChild(1).GetComponent<Text>().text = bladder.ToString() + "mL";
             spectatorTooltip.GetChild(2).GetComponent<Text>().text = agressiveness.ToString() + "%";
             spectatorTooltip.GetChild(3).GetComponent<Text>().text = activeBehavior.getBehaviorName().ToString();
+
+            //Debug
+            string debugText = "";
+            foreach(Behavior behavior in behaviors)
+            {
+                debugText += behavior.getBehaviorName() + "  "+ behavior.getWish() + "\n";
+            }
+            spectatorTooltip.GetChild(4).GetComponent<Text>().text = debugText;
         }
     }
 }
