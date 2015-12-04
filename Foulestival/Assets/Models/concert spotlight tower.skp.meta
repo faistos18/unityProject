@@ -750,8 +750,8 @@ SketchUpImporter:
     4300060: Mesh ske21
   materials:
     importMaterials: 1
-    materialName: 2
-    materialSearch: 0
+    materialName: 1
+    materialSearch: 2
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
