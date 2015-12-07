@@ -20,9 +20,14 @@ public class AddSpectators : MonoBehaviour {
 	{
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(spectator, new Vector3(arrivalZone.position.x + (Random.value * 2 - 1) * arrivalZoneSize, 0, arrivalZone.position.z + (Random.value * 2 - 1)) * arrivalZoneSize, Quaternion.identity);
-            numberOfSpectators++;
+            for (int i = 0; i < 5;i++)
+                createNew();
         }
 	}
+    void createNew()
+    {
+        Instantiate(spectator, new Vector3(arrivalZone.position.x + (Random.value * 2 - 1) * arrivalZoneSize, 0, arrivalZone.position.z + (Random.value * 2 - 1)) * arrivalZoneSize, Quaternion.identity);
+        numberOfSpectators++;
+    }
 
 }
